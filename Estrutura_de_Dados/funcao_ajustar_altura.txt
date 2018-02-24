@@ -1,0 +1,37 @@
+void Ajustar_Altura(DicAVL &D,Noh *n){
+	   
+   Noh *aux = n;
+   Noh *Pai;int ;int Tio_h;Noh *Tio;
+   Noh *Irmao; int Irmao_h;
+   for(;;){
+     Pai = aux->pai; Pai_h = Pai.h;
+     Irmao = (Pai->esq==aux)?Pai->dir:Pai->esq;
+     Irmao_h = (Irmao==NULL)?-1:Irmao.h;
+     if(Pai!=D.raiz){
+            if(aux->pai->pai->dir==aux->pai) Tio = aux->pai->pai->esq;
+            else Tio = aux->pai->pai->dir;
+            Tio_h = (Tio==NULL)?-1:Tio.h;
+     }
+     
+     if(Irmao==NULL){
+            ++Pai.h;
+            if(Pai!=D.raiz){
+            	if(Pai_h<Tio_h)break;
+            	else aux = Pai;
+            }break;
+     }
+
+     else{
+            if(Irmao_h>=aux.h) break;
+            else{
+                 ++Pai.h;
+                 if(Pai!=D.raiz){
+                    if(Pai_h<Tio_h) break; 
+                    aux = Pai;              
+                 }break;  
+            }
+      }
+						
+   }
+		    
+}
