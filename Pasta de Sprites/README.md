@@ -1,0 +1,1 @@
+# Pasta com Sprites para serem usados futuramente em jogos

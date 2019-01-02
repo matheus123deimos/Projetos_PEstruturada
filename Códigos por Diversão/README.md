@@ -1,0 +1,1 @@
+# Códigos Aleatórios de Várias Áreas
